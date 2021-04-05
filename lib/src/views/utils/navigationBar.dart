@@ -8,9 +8,9 @@ class NavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<ControllerUi>(
       init: ControllerUi(),
-      builder: (value) => BottomNavigationBar(
-        onTap: (int i) => value.setIndex(i),
-        currentIndex: value.getIndex(),
+      builder: (controller) => BottomNavigationBar(
+        onTap: (int i) => controller.setIndex(i),
+        currentIndex: controller.getIndex(),
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.map),

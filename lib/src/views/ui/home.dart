@@ -35,8 +35,8 @@ class _ViewSelected extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<ControllerUi>(
       init: ControllerUi(),
-      builder: (value){
-        if(value.getIndex() == 0){
+      builder: (controller){
+        if(controller.getIndex() == 0){
           return Maps();
         }else{
           return SitesUrls();
